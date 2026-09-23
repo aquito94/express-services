@@ -15,6 +15,7 @@ import { Route as DiagnosticoRouteImport } from './routes/diagnostico'
 import { Route as GuiaRouteImport } from './routes/guia'
 import { Route as OperacionRouteImport } from './routes/operacion'
 import { Route as OportunidadRouteImport } from './routes/oportunidad'
+import { Route as RestauranteConectadoRouteImport } from './routes/restaurante-conectado'
 import { Route as RolesRouteImport } from './routes/roles'
 import { Route as SolucionesRouteImport } from './routes/soluciones'
 import { Route as SolucionesIndexRouteImport } from './routes/soluciones.index'
@@ -50,6 +51,11 @@ const OportunidadRoute = OportunidadRouteImport.update({
   path: '/oportunidad',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RestauranteConectadoRoute = RestauranteConectadoRouteImport.update({
+  id: '/restaurante-conectado',
+  path: '/restaurante-conectado',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const RolesRoute = RolesRouteImport.update({
   id: '/roles',
   path: '/roles',
@@ -78,6 +84,7 @@ export interface FileRoutesByFullPath {
   '/guia': typeof GuiaRoute
   '/operacion': typeof OperacionRoute
   '/oportunidad': typeof OportunidadRoute
+  '/restaurante-conectado': typeof RestauranteConectadoRoute
   '/roles': typeof RolesRoute
   '/soluciones': typeof SolucionesRouteWithChildren
   '/soluciones/$slug': typeof SolucionesSlugRoute
@@ -90,6 +97,7 @@ export interface FileRoutesByTo {
   '/guia': typeof GuiaRoute
   '/operacion': typeof OperacionRoute
   '/oportunidad': typeof OportunidadRoute
+  '/restaurante-conectado': typeof RestauranteConectadoRoute
   '/roles': typeof RolesRoute
   '/soluciones/$slug': typeof SolucionesSlugRoute
   '/soluciones': typeof SolucionesIndexRoute
@@ -102,6 +110,7 @@ export interface FileRoutesById {
   '/guia': typeof GuiaRoute
   '/operacion': typeof OperacionRoute
   '/oportunidad': typeof OportunidadRoute
+  '/restaurante-conectado': typeof RestauranteConectadoRoute
   '/roles': typeof RolesRoute
   '/soluciones': typeof SolucionesRouteWithChildren
   '/soluciones/$slug': typeof SolucionesSlugRoute
@@ -116,6 +125,7 @@ export interface FileRouteTypes {
     | '/guia'
     | '/operacion'
     | '/oportunidad'
+    | '/restaurante-conectado'
     | '/roles'
     | '/soluciones'
     | '/soluciones/$slug'
@@ -128,6 +138,7 @@ export interface FileRouteTypes {
     | '/guia'
     | '/operacion'
     | '/oportunidad'
+    | '/restaurante-conectado'
     | '/roles'
     | '/soluciones/$slug'
     | '/soluciones'
@@ -139,6 +150,7 @@ export interface FileRouteTypes {
     | '/guia'
     | '/operacion'
     | '/oportunidad'
+    | '/restaurante-conectado'
     | '/roles'
     | '/soluciones'
     | '/soluciones/$slug'
@@ -152,6 +164,7 @@ export interface RootRouteChildren {
   GuiaRoute: typeof GuiaRoute
   OperacionRoute: typeof OperacionRoute
   OportunidadRoute: typeof OportunidadRoute
+  RestauranteConectadoRoute: typeof RestauranteConectadoRoute
   RolesRoute: typeof RolesRoute
   SolucionesRoute: typeof SolucionesRouteWithChildren
 }
@@ -198,6 +211,13 @@ declare module '@tanstack/react-router' {
       path: '/oportunidad'
       fullPath: '/oportunidad'
       preLoaderRoute: typeof OportunidadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/restaurante-conectado': {
+      id: '/restaurante-conectado'
+      path: '/restaurante-conectado'
+      fullPath: '/restaurante-conectado'
+      preLoaderRoute: typeof RestauranteConectadoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/roles': {
@@ -252,6 +272,7 @@ const rootRouteChildren: RootRouteChildren = {
   GuiaRoute: GuiaRoute,
   OperacionRoute: OperacionRoute,
   OportunidadRoute: OportunidadRoute,
+  RestauranteConectadoRoute: RestauranteConectadoRoute,
   RolesRoute: RolesRoute,
   SolucionesRoute: SolucionesRouteWithChildren,
 }

@@ -5,8 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Netlife Business — Enterprise portfolio
- * Arquitectura editorial clara con azul, turquesa y firma naranja.
+ * NETLIFE BUSINESS — Restaurant operations
+ * Deep blue structure, turquoise signals and the Netlife orange signature.
  */
 
 @theme inline {
@@ -47,6 +47,8 @@
   --color-ink-soft: var(--ink-soft);
   --color-cyan: var(--cyan);
   --color-brand-warm: var(--brand-warm);
+  --color-signal: var(--signal);
+  --color-light: var(--light);
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
   --color-chart-3: var(--chart-3);
@@ -66,43 +68,45 @@
 
 :root {
   --radius: 0.5rem;
-  --background: oklch(0.985 0.004 245);
-  --foreground: oklch(0.19 0.035 252);
+  --background: oklch(0.985 0.004 85);
+  --foreground: oklch(0.2 0.035 245);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.19 0.035 252);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.19 0.035 252);
-  --primary: oklch(0.47 0.14 246);
+  --primary: oklch(0.68 0.18 52);
   --primary-foreground: oklch(0.99 0.004 245);
-  --secondary: oklch(0.955 0.015 235);
-  --secondary-foreground: oklch(0.25 0.055 246);
+  --secondary: oklch(0.95 0.025 205);
+  --secondary-foreground: oklch(0.25 0.055 245);
   --muted: oklch(0.96 0.008 245);
   --muted-foreground: oklch(0.48 0.025 250);
-  --accent: oklch(0.92 0.045 205);
-  --accent-foreground: oklch(0.27 0.07 225);
+  --accent: oklch(0.76 0.12 195);
+  --accent-foreground: oklch(0.19 0.045 245);
   --destructive: oklch(0.58 0.2 25);
   --destructive-foreground: oklch(0.99 0.005 80);
   --border: oklch(0.9 0.012 245);
   --input: oklch(0.89 0.014 245);
-  --ring: oklch(0.61 0.14 220);
-  --surface: oklch(0.97 0.008 245);
-  --surface-strong: oklch(0.935 0.018 240);
-  --brand: oklch(0.47 0.14 246);
-  --brand-soft: oklch(0.88 0.07 216);
+  --ring: oklch(0.68 0.18 52);
+  --surface: oklch(0.965 0.012 210);
+  --surface-strong: oklch(0.92 0.025 215);
+  --brand: oklch(0.68 0.18 52);
+  --brand-soft: oklch(0.92 0.06 60);
   --brand-foreground: oklch(0.99 0.004 245);
-  --highlight: oklch(0.72 0.13 196);
-  --cyan: oklch(0.72 0.13 196);
-  --ink: oklch(0.18 0.035 252);
-  --ink-soft: oklch(0.25 0.04 248);
+  --highlight: oklch(0.72 0.13 190);
+  --cyan: oklch(0.72 0.13 190);
+  --signal: oklch(0.72 0.13 190);
+  --light: oklch(0.985 0.004 85);
+  --ink: oklch(0.22 0.055 245);
+  --ink-soft: oklch(0.29 0.05 245);
   --brand-warm: oklch(0.68 0.18 52);
-  --chart-1: oklch(0.47 0.14 246);
+  --chart-1: oklch(0.68 0.18 52);
   --chart-2: oklch(0.72 0.13 196);
   --chart-3: oklch(0.68 0.18 52);
   --chart-4: oklch(0.58 0.1 226);
   --chart-5: oklch(0.37 0.08 250);
   --sidebar: oklch(0.985 0.004 245);
   --sidebar-foreground: oklch(0.19 0.035 252);
-  --sidebar-primary: oklch(0.47 0.14 246);
+  --sidebar-primary: oklch(0.68 0.18 52);
   --sidebar-primary-foreground: oklch(0.99 0.004 245);
   --sidebar-accent: oklch(0.955 0.015 235);
   --sidebar-accent-foreground: oklch(0.25 0.055 246);
@@ -133,8 +137,14 @@
   html { scroll-behavior: smooth; }
 
   ::selection {
-    background: color-mix(in oklab, var(--cyan) 28%, transparent);
+    background: color-mix(in oklab, var(--signal) 28%, transparent);
   }
+}
+
+@utility hero-scrim {
+  background:
+    linear-gradient(90deg, color-mix(in oklab, var(--ink) 96%, transparent) 0%, color-mix(in oklab, var(--ink) 78%, transparent) 42%, color-mix(in oklab, var(--ink) 16%, transparent) 78%),
+    linear-gradient(0deg, color-mix(in oklab, var(--ink) 76%, transparent) 0%, transparent 58%);
 }
 
 @utility grid-backdrop {
