@@ -8,19 +8,20 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { escalationMinimum, sectors, solutions } from "@/data/portfolio";
+import { escalationMinimum, solutions } from "@/data/portfolio";
+import { horecaTypes } from "@/data/horeca";
 import { getCapabilityName } from "@/data/enterprise";
 
 export const Route = createFileRoute("/oportunidad")({
   head: () => ({
     meta: [
-      { title: "Brief consultivo · Netlife Business" },
+      { title: "Solicita una demo para tu restaurante · NETLIFE BUSINESS" },
       {
         name: "description",
         content:
-          "Prepara un brief del proceso, impacto, volumen, sistemas y resultado esperado para conversar con un consultor Netlife Business.",
+          "Cuéntanos cómo opera tu restaurante y prepara una conversación útil con un consultor NETLIFE BUSINESS.",
       },
-      { property: "og:title", content: "Brief consultivo · Netlife Business" },
+      { property: "og:title", content: "Conversemos sobre tu restaurante · NETLIFE BUSINESS" },
       {
         property: "og:description",
         content: "Un buen registro acelera preventa, validación y propuesta.",
@@ -64,8 +65,8 @@ function Oportunidad() {
     () =>
       [
         "BRIEF DE OPORTUNIDAD · NETLIFE BUSINESS",
-        `Empresa: ${form.empresa}`,
-        `Sector: ${form.sector}`,
+         `Restaurante o negocio: ${form.empresa}`,
+         `Tipo de operación: ${form.sector}`,
         `Contacto: ${form.contacto} · ${form.email} · ${form.telefono}`,
         `Capacidades consideradas: ${interes
           .map((i) => {
@@ -104,13 +105,13 @@ function Oportunidad() {
 
   return (
     <div className="mx-auto max-w-6xl px-5 py-14">
-      <p className="text-xs tracking-widest text-primary uppercase">Conversación consultiva</p>
+       <p className="text-xs tracking-widest text-primary uppercase">Diagnóstico y demo</p>
       <h1 className="mt-3 text-4xl font-normal sm:text-5xl">
-        Cuéntanos qué proceso quieres mejorar
+         Cuéntanos cómo funciona hoy tu restaurante
       </h1>
       <p className="mt-3 max-w-2xl text-muted-foreground">
-        Organizamos el problema, el proceso actual, el impacto y el resultado esperado para diseñar
-        una conversación útil con un consultor. Nada se almacena en línea.
+         Identificamos dónde existe fricción, qué estás perdiendo y qué conviene conectar. Este formulario
+         prepara un resumen para tu conversación; nada se almacena en línea.
       </p>
 
       <div className="mt-6 flex flex-wrap gap-2">
@@ -127,13 +128,13 @@ function Oportunidad() {
       <div className="mt-10 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
         <Card className="border-border/70 bg-surface/70 p-6">
           <div className="grid gap-5 sm:grid-cols-2">
-            <Field label="Empresa" value={form.empresa} onChange={(v) => set("empresa", v)} />
+             <Field label="Restaurante o negocio" value={form.empresa} onChange={(v) => set("empresa", v)} />
             <div>
               <Label className="text-xs tracking-widest text-muted-foreground uppercase">
-                Sector
+                 Tipo de operación
               </Label>
               <div className="mt-2 flex flex-wrap gap-2">
-                {sectors.map((s) => (
+                 {horecaTypes.map(({ name: s }) => (
                   <button
                     key={s}
                     type="button"
@@ -158,12 +159,12 @@ function Oportunidad() {
               onChange={(v) => set("responsable", v)}
             />
             <Field
-              label="Volumen del proceso (al mes)"
+               label="Pedidos o clientes al mes"
               value={form.volumen}
               onChange={(v) => set("volumen", v)}
             />
             <Field
-              label="Usuarios involucrados"
+               label="Locales y personas involucradas"
               value={form.usuarios}
               onChange={(v) => set("usuarios", v)}
             />
@@ -174,7 +175,7 @@ function Oportunidad() {
               onChange={(v) => set("fecha", v)}
             />
             <Field
-              label="Sistemas actuales"
+               label="Herramientas que usan hoy"
               value={form.sistemas}
               onChange={(v) => set("sistemas", v)}
             />
@@ -182,12 +183,12 @@ function Oportunidad() {
 
           <div className="mt-6 grid gap-5">
             <AreaField
-              label="Problema detectado"
+               label="Qué te preocupa hoy"
               value={form.problema}
               onChange={(v) => set("problema", v)}
             />
             <AreaField
-              label="Cómo se hace hoy (proceso actual)"
+               label="Cómo trabajan hoy"
               value={form.proceso}
               onChange={(v) => set("proceso", v)}
             />
@@ -205,7 +206,7 @@ function Oportunidad() {
 
           <div className="mt-6">
             <Label className="text-xs tracking-widest text-muted-foreground uppercase">
-              Capacidades que podrían intervenir
+               Áreas que podrían intervenir
             </Label>
             <div className="mt-2 flex flex-wrap gap-2">
               {solutions.map((s) => (

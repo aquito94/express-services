@@ -7,3 +7,10 @@
 - [x] Alinear diagnóstico, inversión, guía y brief de oportunidad.
 - [x] Revisar metadatos de todas las páginas.
 - [x] Validar interacción, móvil, escritorio, rutas y publicación estática.
+
+# Vertical HORECA
+
+- [x] Reorientar el inicio hacia la operación real de restaurantes.
+- [x] Crear experiencias profundas para operación, roles y restaurante conectado.
+- [x] Adaptar diagnóstico, contacto, navegación y sistema visual.
+- [x] Validar visualmente móvil y escritorio y corregir incidencias finales.
