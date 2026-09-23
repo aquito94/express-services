@@ -13,4 +13,4 @@
 - [x] Reorientar el inicio hacia la operación real de restaurantes.
 - [x] Crear experiencias profundas para operación, roles y restaurante conectado.
 - [x] Adaptar diagnóstico, contacto, navegación y sistema visual.
-- [ ] Validar visualmente móvil y escritorio y corregir incidencias finales.
+- [x] Validar visualmente móvil y escritorio y corregir incidencias finales.
