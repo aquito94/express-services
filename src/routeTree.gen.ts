@@ -13,7 +13,9 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as CotizadorRouteImport } from './routes/cotizador'
 import { Route as DiagnosticoRouteImport } from './routes/diagnostico'
 import { Route as GuiaRouteImport } from './routes/guia'
+import { Route as OperacionRouteImport } from './routes/operacion'
 import { Route as OportunidadRouteImport } from './routes/oportunidad'
+import { Route as RolesRouteImport } from './routes/roles'
 import { Route as SolucionesRouteImport } from './routes/soluciones'
 import { Route as SolucionesIndexRouteImport } from './routes/soluciones.index'
 import { Route as SolucionesSlugRouteImport } from './routes/soluciones.$slug'
@@ -38,9 +40,19 @@ const GuiaRoute = GuiaRouteImport.update({
   path: '/guia',
   getParentRoute: () => rootRouteImport,
 } as any)
+const OperacionRoute = OperacionRouteImport.update({
+  id: '/operacion',
+  path: '/operacion',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const OportunidadRoute = OportunidadRouteImport.update({
   id: '/oportunidad',
   path: '/oportunidad',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RolesRoute = RolesRouteImport.update({
+  id: '/roles',
+  path: '/roles',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SolucionesRoute = SolucionesRouteImport.update({
@@ -64,7 +76,9 @@ export interface FileRoutesByFullPath {
   '/cotizador': typeof CotizadorRoute
   '/diagnostico': typeof DiagnosticoRoute
   '/guia': typeof GuiaRoute
+  '/operacion': typeof OperacionRoute
   '/oportunidad': typeof OportunidadRoute
+  '/roles': typeof RolesRoute
   '/soluciones': typeof SolucionesRouteWithChildren
   '/soluciones/$slug': typeof SolucionesSlugRoute
   '/soluciones/': typeof SolucionesIndexRoute
@@ -74,7 +88,9 @@ export interface FileRoutesByTo {
   '/cotizador': typeof CotizadorRoute
   '/diagnostico': typeof DiagnosticoRoute
   '/guia': typeof GuiaRoute
+  '/operacion': typeof OperacionRoute
   '/oportunidad': typeof OportunidadRoute
+  '/roles': typeof RolesRoute
   '/soluciones/$slug': typeof SolucionesSlugRoute
   '/soluciones': typeof SolucionesIndexRoute
 }
@@ -84,7 +100,9 @@ export interface FileRoutesById {
   '/cotizador': typeof CotizadorRoute
   '/diagnostico': typeof DiagnosticoRoute
   '/guia': typeof GuiaRoute
+  '/operacion': typeof OperacionRoute
   '/oportunidad': typeof OportunidadRoute
+  '/roles': typeof RolesRoute
   '/soluciones': typeof SolucionesRouteWithChildren
   '/soluciones/$slug': typeof SolucionesSlugRoute
   '/soluciones/': typeof SolucionesIndexRoute
@@ -96,7 +114,9 @@ export interface FileRouteTypes {
     | '/cotizador'
     | '/diagnostico'
     | '/guia'
+    | '/operacion'
     | '/oportunidad'
+    | '/roles'
     | '/soluciones'
     | '/soluciones/$slug'
     | '/soluciones/'
@@ -106,7 +126,9 @@ export interface FileRouteTypes {
     | '/cotizador'
     | '/diagnostico'
     | '/guia'
+    | '/operacion'
     | '/oportunidad'
+    | '/roles'
     | '/soluciones/$slug'
     | '/soluciones'
   id:
@@ -115,7 +137,9 @@ export interface FileRouteTypes {
     | '/cotizador'
     | '/diagnostico'
     | '/guia'
+    | '/operacion'
     | '/oportunidad'
+    | '/roles'
     | '/soluciones'
     | '/soluciones/$slug'
     | '/soluciones/'
@@ -126,7 +150,9 @@ export interface RootRouteChildren {
   CotizadorRoute: typeof CotizadorRoute
   DiagnosticoRoute: typeof DiagnosticoRoute
   GuiaRoute: typeof GuiaRoute
+  OperacionRoute: typeof OperacionRoute
   OportunidadRoute: typeof OportunidadRoute
+  RolesRoute: typeof RolesRoute
   SolucionesRoute: typeof SolucionesRouteWithChildren
 }
 
@@ -160,11 +186,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GuiaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/operacion': {
+      id: '/operacion'
+      path: '/operacion'
+      fullPath: '/operacion'
+      preLoaderRoute: typeof OperacionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/oportunidad': {
       id: '/oportunidad'
       path: '/oportunidad'
       fullPath: '/oportunidad'
       preLoaderRoute: typeof OportunidadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/roles': {
+      id: '/roles'
+      path: '/roles'
+      fullPath: '/roles'
+      preLoaderRoute: typeof RolesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/soluciones': {
@@ -210,7 +250,9 @@ const rootRouteChildren: RootRouteChildren = {
   CotizadorRoute: CotizadorRoute,
   DiagnosticoRoute: DiagnosticoRoute,
   GuiaRoute: GuiaRoute,
+  OperacionRoute: OperacionRoute,
   OportunidadRoute: OportunidadRoute,
+  RolesRoute: RolesRoute,
   SolucionesRoute: SolucionesRouteWithChildren,
 }
 export const routeTree = rootRouteImport
