@@ -1,0 +1,11 @@
+[build]
+  command = "NITRO_PRESET=cloudflare-module bun run build"
+  publish = ".output/public"
+
+[build.environment]
+  NITRO_PRESET = "cloudflare-module"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
