@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, CheckCircle2, Clock3, Flame, Utensils } from "lucide-react";
+import { ArrowRight, CheckCircle2, Clock3, Flame } from "lucide-react";
 import kitchenImage from "@/assets/horeca-kitchen.jpg";
 import { Button } from "@/components/ui/button";
 import { FlowLine } from "@/components/site/FlowLine";

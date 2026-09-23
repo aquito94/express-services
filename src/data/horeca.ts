@@ -69,12 +69,12 @@ export const diagnostics = [
 
 export const horecaTypes = [
  {name:"Restaurantes", focus:"Mesas, pedidos, cocina, delivery, inventario, margen y fidelización.", featured:true},
- {name:"Cafeterías", focus:"Horas pico, pedidos rápidos, frecuencia, ticket e inventario."},
- {name:"Pastelerías", focus:"Pedidos personalizados, anticipos, producción, entregas y recordatorios."},
- {name:"Hoteles", focus:"Reservas, restaurante, room service, eventos, consumos y experiencia."},
- {name:"Dark kitchens", focus:"Apps, costos, producción, tiempos, delivery y rentabilidad por marca."},
- {name:"Cadenas y franquicias", focus:"Comparación entre locales, estándares, inventario y control central."},
- {name:"Food courts y catering", focus:"Volumen, producción, coordinación, cobro y entregas."},
+ {name:"Cafeterías", focus:"Horas pico, pedidos rápidos, frecuencia, ticket e inventario.", featured:false},
+ {name:"Pastelerías", focus:"Pedidos personalizados, anticipos, producción, entregas y recordatorios.", featured:false},
+ {name:"Hoteles", focus:"Reservas, restaurante, room service, eventos, consumos y experiencia.", featured:false},
+ {name:"Dark kitchens", focus:"Apps, costos, producción, tiempos, delivery y rentabilidad por marca.", featured:false},
+ {name:"Cadenas y franquicias", focus:"Comparación entre locales, estándares, inventario y control central.", featured:false},
+ {name:"Food courts y catering", focus:"Volumen, producción, coordinación, cobro y entregas.", featured:false},
 ] as const;
 
 export const restaurantMetrics = ["Ventas","Margen","Ticket promedio","Conversión","Frecuencia","Recompra","Pedidos por canal","Comisión de apps","Tiempo de preparación","Tiempo de entrega","Rotación de mesa","Cancelaciones","Reclamos","NPS","CSAT","Merma","Costo de alimentos","Rentabilidad por producto","Rentabilidad por local","Horas pico","Productividad","Stock","CAC","ROAS","LTV"];
