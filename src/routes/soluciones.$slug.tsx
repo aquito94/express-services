@@ -68,7 +68,7 @@ function SolutionDetail() {
 
           <Card className="mt-8 border-primary/30 bg-primary/5 p-6">
             <p className="text-xs tracking-widest text-primary uppercase">Impacto empresarial</p>
-            <p className="mt-2 font-display text-xl leading-snug">{solution.sellsAs}</p>
+            <p className="mt-2 font-display text-xl font-semibold leading-snug">{solution.sellsAs}</p>
           </Card>
 
           <div className="mt-8 grid gap-6 sm:grid-cols-2">

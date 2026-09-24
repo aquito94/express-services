@@ -45,7 +45,7 @@ function Guia() {
   return (
     <div className="mx-auto max-w-6xl px-5 py-14">
       <p className="text-xs tracking-widest text-primary uppercase">Programa aliado estratégico</p>
-      <h1 className="mt-3 text-3xl font-semibold sm:text-4xl">Guía del aliado</h1>
+      <h1 className="mt-3 text-[32px] font-bold sm:text-[40px] lg:text-[52px]">Guía del aliado</h1>
       <p className="mt-3 max-w-2xl text-muted-foreground">
         El partner que más vende no es el que más habla de tecnología. Es el que mejor detecta el
         problema: detecta → cuantifica → prioriza → construye con Netlife → mide → expande.
@@ -153,7 +153,7 @@ function Guia() {
         </Card>
         <Card className="border-primary/30 bg-primary/5 p-6 md:col-span-2">
           <p className="text-xs tracking-widest text-primary uppercase">Regla comercial</p>
-          <p className="mt-2 font-display text-lg leading-snug">{commercialRule}</p>
+          <p className="mt-2 font-display text-lg font-semibold leading-snug">{commercialRule}</p>
           <p className="mt-2 text-sm text-muted-foreground">
             Eso no frena la venta. La hace defendible.
           </p>

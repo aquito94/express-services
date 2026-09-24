@@ -74,7 +74,7 @@ ${priceDisclaimer}`;
   return (
     <div className="mx-auto max-w-6xl px-5 py-14">
       <p className="text-xs tracking-widest text-primary uppercase">Inversión y alcance</p>
-      <h1 className="mt-3 text-4xl font-normal sm:text-5xl">Primero alcance. Después inversión.</h1>
+      <h1 className="mt-3 text-[32px] font-bold sm:text-[40px] lg:text-[52px]">Primero alcance. Después inversión.</h1>
       <p className="mt-3 max-w-2xl text-muted-foreground">
         Las soluciones estandarizadas pueden tener valores de entrada. Los proyectos empresariales se
         definen por alcance, volumen, integraciones, complejidad y caso de negocio.
@@ -181,7 +181,7 @@ ${priceDisclaimer}`;
           </Card>
           <Card className="border-border bg-ink p-6 text-primary-foreground">
             <p className="text-xs tracking-widest text-cyan uppercase">Proyectos empresariales</p>
-            <p className="mt-3 font-display text-xl">Inversión según diagnóstico, alcance, integraciones, volumen, complejidad y caso de negocio.</p>
+            <p className="mt-3 font-display text-xl font-semibold">Inversión según diagnóstico, alcance, integraciones, volumen, complejidad y caso de negocio.</p>
             <p className="mt-3 text-sm text-primary-foreground/60">No se presenta un precio fijo cuando el proceso requiere arquitectura o desarrollo a medida.</p>
           </Card>
         </div>
