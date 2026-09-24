@@ -14,3 +14,9 @@
 - [x] Crear experiencias profundas para operación, roles y restaurante conectado.
 - [x] Adaptar diagnóstico, contacto, navegación y sistema visual.
 - [x] Validar visualmente móvil y escritorio y corregir incidencias finales.
+
+# Ajuste tipográfico y comercial
+
+- [ ] Sustituir Work Sans por Manrope y ajustar jerarquías tipográficas.
+- [ ] Ampliar el logo y añadir el bloque de impacto operativo.
+- [ ] Actualizar el mensaje comercial final y validar escritorio, tablet y móvil.
