@@ -63,7 +63,7 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   --font-display: "Instrument Serif", ui-serif, Georgia, serif;
-  --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
@@ -123,6 +123,8 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -134,11 +136,64 @@
     letter-spacing: 0;
   }
 
+  p {
+    line-height: 1.6;
+  }
+
+  main h2 {
+    font-size: 2rem;
+    line-height: 1.08;
+  }
+
+  main h3 {
+    font-size: 1.375rem;
+    line-height: 1.16;
+  }
+
+  @media (width >= 40rem) {
+    main h2 {
+      font-size: 2.25rem;
+    }
+
+    main h3 {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (width >= 64rem) {
+    main h2 {
+      font-size: 2.75rem;
+    }
+  }
+
   html { scroll-behavior: smooth; }
 
   ::selection {
     background: color-mix(in oklab, var(--signal) 28%, transparent);
   }
+}
+
+@utility heading-section {
+  font-size: 2rem;
+  line-height: 1.08;
+
+  @media (width >= 40rem) {
+    font-size: 2.25rem;
+  }
+
+  @media (width >= 64rem) {
+    font-size: 2.75rem;
+  }
+}
+
+@utility body-copy {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+@utility detail-copy {
+  font-size: 0.9375rem;
+  line-height: 1.6;
 }
 
 @utility hero-scrim {
