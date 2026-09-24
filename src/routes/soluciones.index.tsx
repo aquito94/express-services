@@ -56,7 +56,7 @@ function SolutionsIndex() {
   return (
     <div className="mx-auto max-w-7xl px-5 py-14">
       <p className="text-xs tracking-widest text-primary uppercase">Mapa de capacidades</p>
-      <h1 className="mt-3 text-3xl font-semibold sm:text-4xl">
+      <h1 className="mt-3 text-[32px] font-bold sm:text-[40px] lg:text-[52px]">
         Una capacidad aislada no resuelve un proceso complejo
       </h1>
       <p className="mt-3 max-w-2xl text-muted-foreground">
