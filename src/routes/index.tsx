@@ -30,7 +30,7 @@ function Home() {
     <div className="absolute inset-0 hero-scrim" />
     <div className="relative mx-auto flex min-h-[calc(100svh-72px)] max-w-[90rem] items-end px-5 pb-14 pt-28 lg:px-8 lg:pb-20">
       <div className="max-w-4xl"><p className="text-xs font-semibold uppercase tracking-[0.18em] text-signal">NETLIFE BUSINESS · Restaurantes conectados</p>
-      <h1 className="mt-5 max-w-4xl text-[44px] leading-[0.98] md:text-[56px] lg:text-[78px]">Tu restaurante no necesita más sistemas. <span className="text-accent">Necesita que todo funcione junto.</span></h1>
+      <h1 className="mt-5 max-w-4xl text-[42px] leading-[1.05] tracking-[-0.02em] md:text-[54px] lg:text-[76px]">Tu restaurante no necesita más sistemas. <span className="text-accent">Necesita que todo funcione junto.</span></h1>
       <p className="body-copy mt-7 max-w-3xl text-light/75">Desde que un cliente te descubre hasta que vuelve a comprar. Conectamos ventas, pedidos, cocina, delivery, reservas, pagos, clientes, inventario y datos para que controles mejor y crezcas sin aumentar el caos.</p>
       <div className="mt-9 flex flex-wrap gap-3"><Button asChild size="lg"><Link to="/diagnostico">Quiero ver mi restaurante conectado <ArrowRight /></Link></Button><Button asChild size="lg" variant="outline" className="border-light/30 bg-light/5 text-light hover:bg-light/10 hover:text-light"><a href="#recorrido">Ver cómo funciona <ArrowDown /></a></Button></div></div>
     </div>
