@@ -17,6 +17,6 @@
 
 # Ajuste tipográfico y comercial
 
-- [ ] Sustituir Work Sans por Manrope y ajustar jerarquías tipográficas.
-- [ ] Ampliar el logo y añadir el bloque de impacto operativo.
-- [ ] Actualizar el mensaje comercial final y validar escritorio, tablet y móvil.
+- [x] Sustituir Work Sans por Manrope y ajustar jerarquías tipográficas.
+- [x] Ampliar el logo y añadir el bloque de impacto operativo.
+- [x] Actualizar el mensaje comercial final y validar escritorio, tablet y móvil.
