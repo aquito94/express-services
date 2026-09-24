@@ -181,7 +181,7 @@ ${priceDisclaimer}`;
           </Card>
           <Card className="border-border bg-ink p-6 text-primary-foreground">
             <p className="text-xs tracking-widest text-cyan uppercase">Proyectos empresariales</p>
-            <p className="mt-3 font-display text-xl">Inversión según diagnóstico, alcance, integraciones, volumen, complejidad y caso de negocio.</p>
+            <p className="mt-3 font-display text-xl font-semibold">Inversión según diagnóstico, alcance, integraciones, volumen, complejidad y caso de negocio.</p>
             <p className="mt-3 text-sm text-primary-foreground/60">No se presenta un precio fijo cuando el proceso requiere arquitectura o desarrollo a medida.</p>
           </Card>
         </div>
