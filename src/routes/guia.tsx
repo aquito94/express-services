@@ -153,7 +153,7 @@ function Guia() {
         </Card>
         <Card className="border-primary/30 bg-primary/5 p-6 md:col-span-2">
           <p className="text-xs tracking-widest text-primary uppercase">Regla comercial</p>
-          <p className="mt-2 font-display text-lg leading-snug">{commercialRule}</p>
+          <p className="mt-2 font-display text-lg font-semibold leading-snug">{commercialRule}</p>
           <p className="mt-2 text-sm text-muted-foreground">
             Eso no frena la venta. La hace defendible.
           </p>
