@@ -123,6 +123,8 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -136,6 +138,32 @@
 
   p {
     line-height: 1.6;
+  }
+
+  main h2 {
+    font-size: 2rem;
+    line-height: 1.08;
+  }
+
+  main h3 {
+    font-size: 1.375rem;
+    line-height: 1.16;
+  }
+
+  @media (width >= 40rem) {
+    main h2 {
+      font-size: 2.25rem;
+    }
+
+    main h3 {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (width >= 64rem) {
+    main h2 {
+      font-size: 2.75rem;
+    }
   }
 
   html { scroll-behavior: smooth; }
